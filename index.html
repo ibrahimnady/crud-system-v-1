@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ibrahim Nady">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, bootstrap">
+    <title>addProduct</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <h1 class=" text-black text-center">system crud</h1>
+    </div>
+    <div class=" container-fluid">
+        <div>
+            <input id="title" type="text" placeholder="title" class="form-control w-75 m-auto  " id="title"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="row justify-content-center ">
+            <input id="price" onkeyup="getTotal()" type="number" placeholder="price"
+                class="form-control input-size col-lg-2  ms-2 mt-3 " aria-describedby="emailHelp">
+            <input id="taxes" onkeyup="getTotal()" type="number" placeholder="taxes"
+                class="form-control input-size col-lg-2  ms-2 mt-3 " aria-describedby="emailHelp">
+            <input id="ads" onkeyup="getTotal()" type="number" placeholder="ads"
+                class="form-control input-size col-lg-2  ms-2 mt-3 " aria-describedby="emailHelp">
+            <input id="discount" onkeyup="getTotal()" type="number" placeholder="discount"
+                class="form-control input-size col-lg-2  ms-2 mt-3 " aria-describedby="emailHelp">
+            <div id="total" class=" col-lg-4 input-size rounded text-black mt-3 ms-2">Total : </div>
+        </div>
+        <div>
+            <input  id="count" onkeyup="getTotal()" type="number" placeholder="count" class="form-control w-75 m-auto mt-3 "
+                aria-describedby="emailHelp">
+        </div>
+        <div>
+            <input id="category" type="text" placeholder="category" class="form-control w-75 m-auto mt-3 "
+                aria-describedby="emailHelp">
+        </div>
+        <div class=" text-center ">
+            <button id="create" type="submit" class="btn btn-danger w-75  mt-3  "
+                aria-describedby="emailHelp">create</button>
+        </div>
+        <div>
+            <input id="search" type="search" placeholder="search" class="form-control w-75 m-auto mt-3 "
+                aria-describedby="emailHelp">
+        </div>
+        <div class=" text-center ">
+            <button id="searchByTitle" type="button" class="btn btn-danger w-25  mt-3  " id="searchByTitle"
+                aria-describedby="emailHelp">search by title</button>
+            <button id="searchByCategory" type="button" class="btn btn-danger w-25  mt-3  "
+                aria-describedby="emailHelp">search by category</button>
+        </div>
+        <div id="deleteAll" class=" text-center ">
+
+        </div>
+    </div>
+    <table class="table  mt-5 text-center w-75 m-auto">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>CATEGORY</th>
+                <th>PRICE</th>
+                <th>TAXSES</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>COUNT</th>
+                <th>TOTAL</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
